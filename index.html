@@ -1,1 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Tab Title-->
+    <title>JAN-KEN-PON</title>
+    <!--CSS File-->
+    <link rel="stylesheet" href="css/style.css">
+    <!--Tab Icon-->
+    <link rel="icon" href="assets/icon.png">
+</head>
+<body>
+    <!--Menu Screen-->
+    <div id="menuScreen" class="menu-screen">
+        <h1 class="menu-title">JAN-KEN-PON!</h1>
+        <button class="play-btn" onclick="startGame()">PLAY</button>
+    </div>
 
+    <!--Game Screen-->
+    <div id="gameScreen" class="hidden">
+
+        <!--Title-->
+        <h1>JAN-KEN-PON</h1>
+
+        <!--Level Selector-->
+        <div class="level-selector">
+            <label for="AILevel">AI Level: </label>
+            <select id="AILevel" onchange="setLevel(this.value)">
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+        </div>
+
+        <!--Choices-->
+        <div class="choices">
+            <button onclick="play('rock')">Rock</button>
+            <button onclick="play('paper')">Paper</button>
+            <button onclick="play('scissors')">Scissors</button>
+        </div>
+
+        <!--Images-->
+        <div class="images">
+            <div id="userImage"></div>
+            <div id="computerImage"></div>
+        </div>
+
+        <!-- Countdown -->
+        <div id="countdown" class="countdown hidden"></div>
+
+        <!-- Result Text -->
+        <div class="result" id="resultText">Make your move!</div>
+
+        <!--Scoreboard-->
+        <div class="scoreboard" id="scoreboard">You : 0 | CPU: 0</div>
+
+        <!--Music Toggle-->
+        <div class="music-toggle">
+            <label class="switch">
+                <input type="checkbox" id="musicSwitch" onclick="toggleMusic()">
+                <span class="slider round"></span>
+            </label>
+            <span class="music-label">BG Music</span>
+        <!--Volume Slider-->
+            <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="0.5" oninput="setVolume(this.value)">
+        </div>
+
+        <!--Animated Equalizer-->
+        <div class="equalizer" id="equalizer">
+            <div class="bar bar1"></div>
+            <div class="bar bar2"></div>
+            <div class="bar bar3"></div>
+            <div class="bar bar4"></div>
+        </div>
+
+        <!--BG Music-->
+        <audio id="bgMusic">
+            <source src="assets/bg.mp3" type="audio/mp3">
+        </audio>
+        </div>
+
+        <!--Pop-Up-->
+        <div id="popup" class="popup hidden">
+            <div class="popup-content">
+                <h2 id="popupMessage"></h2>
+                <button onclick="closePopup()">Play Again</button>
+            </div>
+        </div>
+
+        <!--JS File-->
+        <script src="js/script.js"></script>
+    </div>
+</body>
+</html>

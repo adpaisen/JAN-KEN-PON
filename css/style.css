@@ -5,10 +5,10 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #fad0c4, #ff9a9e);
+    background: linear-gradient(-45deg, #020617, #0f172a, #064e3b, #16a34a);
     background-size: 400% 400%;
     animation: gradientBG 15s ease infinite;
-    color: #000;
+    color: #fff;
     margin: 0;
     padding: 0;
 }
@@ -30,7 +30,7 @@ h1 {
 .menu-screen {
     position: fixed;
     inset: 0;
-    background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #fad0c4, #ff9a9e);
+    background: linear-gradient(-45deg, #020617, #0f172a, #064e3b, #16a34a);
     display: flex;
     flex-direction: column;
     justify-content: center;
